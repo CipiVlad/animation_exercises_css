@@ -269,6 +269,95 @@ section .colorgreen {
     }
 }
 
+/* ------------4 Balls Change Color----- */
+.ball {
+    background: rgb(7, 123, 218);
+    height: 100vh;
+    /* postion: relative; */
+}
+
+.one {
+    position: absolute;
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: fourball;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+}
+
+.two {
+    position: absolute;
+
+    background-color: lightcoral;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: fourball;
+    animation-duration: 4s;
+
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+.three {
+    position: absolute;
+
+    background-color: lawngreen;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: fourball;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+
+.four {
+    position: absolute;
+
+    background-color: lightslategrey;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: fourball;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+
+@keyframes fourball {
+    0% {
+        transform: translate(0);
+        background-color: rgb(231, 237, 239);
+    }
+
+    25% {
+        transform: translate(500px);
+        background-color: lightblue;
+
+    }
+
+    50% {
+        transform: translate(500px, 500px);
+        background: lightcoral;
+    }
+
+    75% {
+        transform: translate(0px, 500px);
+        background: rgb(88, 61, 61);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        background: rgb(143, 240, 128);
+
+    }
+}
+
 /* -------------img-hover--------------- */
 
 
@@ -277,16 +366,17 @@ section .colorgreen {
     width: 100%;
     height: 100vh;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 div img {
     padding-top: 15%;
-    ;
 }
 
 img {
     display: block;
-    margin: 0 auto;
     border-radius: 50%;
     padding: 2%;
 
@@ -339,6 +429,8 @@ article {
 article div {
     padding-left: 10px;
     margin-left: 40px;
+    border-radius: 50%;
+
 }
 
 .w1 {
